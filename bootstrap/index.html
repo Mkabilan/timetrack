@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tracker</title>
+    <style>
+     .k{
+      font-size:small;
+     } 
+     .seal{
+      font-size: large;
+     }
+     .land{
+      color: #0e1882;
+     } 
+     .iconwhite{
+      color:white;
+     }
+     .iconred{
+      color:#cb0825;
+     }
+     .textviolet{
+      color:rgb(173, 49, 173);
+     }
+     .bgviolet{
+      background-color: rgb(236, 196, 236);
+     }
+     .planet{
+      background-color:#f1f1f4;
+     }
+     .comet{
+      background-color:#c0c1ce;
+     }
+     .nebula{
+      background-color: #0b0956;
+     }
+     .gravity{
+      background-color: #abadca;
+     }
+     .star{
+      background-color: #5d5b5b;
+     }
+     .orbit{
+      background-color: #79b36e;
+     }
+     .eclipse{
+      background-color: #6361a0 ;
+     }
+     .br-violet{
+      color: #0b0956;
+     }
+
+     .hr{
+      width: 25%;
+     }
+     .click{
+      background-color: #e7b2ba;
+
+     }
+     
+    
+    </style>
+    <link rel="stylesheet" href="./assests/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./assests/js/bootstrap.min.js"></script>
+    <script src="./assests/js/jquery.min.js"></script>
+    <script src=".\assests\js\popper.min.js"></script>
+</head>
+<body>
+
+  
+  <div class="container border-bottom">
+        <header>
+         <div class="row">
+             <div class="col-6 p-2">
+            <button class="btn border border-1 btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <div class="container nebula">
+              <header class="p-3">
+              <div class="droptown-header d-flex justify-content-between"><img src=".\bootstrap\assests\images\logo.png">
+              <button type="button" class="btn btn-close btn-danger" ></button></div>  
+              </header>
+              <section class=" pe-4 pb-3">
+              <li><a class="dropdown-item p-2 text-white active" href="#"><img src=".\bootstrap\assests\images\speedometer.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</a></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\graph.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Activity</a></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\timer_white.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timesheet</a></li>
+              <li><hr class="dropdown-divider hr"></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\icons8-today-96.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To-Do</a></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\bill.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invoices</a></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\assests\images\folder.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projects</a></li>
+              <li><hr class="dropdown-divider hr"></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\help.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Help</a></li>
+              <li><a class="dropdown-item p-2 text-white" href="#"><img src=".\bootstrap\assests\images\download.png" class="img-fluid p-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Download App</a></li>
+              </section>
+              <footer>
+                <div class="container text-center nebula">
+                  <div class="row">
+                    <div class="col">
+                      <button type="button" class="btn  position-relative">
+                        <i class="bi bi-bell iconwhite"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          2
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </button> 
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn"><img src=".\bootstrap\assests\images\settings.png" class="img-fluid" alt="set"></button>
+                    </div>
+                    <div class="col">
+                     <button type="button" class="btn "><i class="bi bi-person-fill iconwhite"></i></button> 
+                    </div>
+                  </div>
+                </div>
+              </footer>
+              </div>
+            </ul>
+            <div class="btn-group bg-body-tertiary">
+            <button type="button" class="btn border border-1">Design Task</button>
+            <button type="button" class="btn border border-1 dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-dark">
+              <ul>
+              <li><a class="dropdown-item" href="#">task 1</a></li>
+              <li><a class="dropdown-item" href="#">task 2</a></li>
+              <li><a class="dropdown-item" href="#">task 3</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <div class="col-6 p-2 d-flex justify-content-end">
+         <button class="btn btn-light " style="background-color: #e6d5fa;color: #3e1b69;"><strong><large>+</large>Add project</strong></button></id>
+        </div>
+     </div>
+    </div>
+    </header>
+    <div class="container border">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary mb-2 ">
+        <div class="container-fluid ">
+          <h4 class="navbar-brand h4 ">Timesheet</h4>
+            <span class="navbar-text ">
+              <button class="btn btn-sm " style="background-color: #e7d6e7;"><strong style="color: #8007d6;">VIEW FULL SHEET</strong></button>
+             <button class="btn "><img class="img-fluid" src=".\bootstrap\assests\images\more.png" alt="more"></button>
+             
+          </div>
+        
+        </nav>
+      
+      <table class="table table-striped table-borderless table-hover table-responsive  fs-6">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Date</th>
+            <th scope="col">Start Time</th>
+            <th scope="col">Stop Time</th>
+            <th scope="col">Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><button class="btn " style="background-color: #efcff9;"><i class="fa-sharp fa-solid fa-1 fa" style="color: #0e0c58;"></i></button>&nbsp;Landing page Design</th>
+            <td>May21,2019</td>
+            <td>1.10pm</td>
+            <td>9.20pm</td>
+            <td>8:10:37</td>
+          </tr>
+          <tr>
+            <th><button class="btn " style="background-color: rgb(250, 250, 202);"><i class="fa-sharp fa-solid fa-3 fa" style="color: rgb(199, 199, 63);"></i></button>
+            &nbsp;Mobile App</th>
+            <td>May22,2019</td>
+            <td>12.00pm</td>
+            <td>8.00pm</td>
+            <td>8:00:00</td>
+          </tr>
+          <tr>
+            <th><button class="btn" style="background-color: #f9d6e8;"><i class="fa-sharp fa-solid fa-5 fa" style="color:rgb(245, 7, 103);"></i></button>
+              &nbsp;UI/UX</th>
+            <td>May23,2019</td>
+            <td>1.10pm</td>
+            <td>1.20pm</td>
+            <td>0:10:37</td>
+          </tr>
+          <tr>
+            <th><button class="btn" style="background-color: #c9dfff;"><i class="fa-sharp fa-solid fa-2 fa" style="color: #095f91;"></i></button>
+              &nbsp;Website/apps</th>
+            <td>May24,2019</td>
+            <td>1.11pm</td>
+            <td>9.00pm</td>
+            <td>7:49:37</td>
+          </tr>
+          <tr>
+            <th><button class="btn" style="background-color: #fbeba1;"><i class="fa-sharp fa-solid fa-9 fa" style="color: #ffb804;"></i></button>
+              &nbsp;Branding</th>
+            <td>May26,2019</td>
+            <td>1.10pm</td>
+            <td>1.20pm</td>
+            <td>0:10:37</td>
+          </tr>
+        </tbody>
+      </table></div>
+      <div class="col-md-4 border border-end-0 border-top-1 border-bottom-0 pb-2">
+        <h5 class="p-4 ps-1"><strong>Report</strong></h5>
+       <div class="card rounded d-flex flex-row mb-4">
+       <div class="card-head nebula ps-2 d-flex align-items-center "><button class="btn" style="background-color: #3e1b69;"><img  src=".\bootstrap\assests\images\graph.png"></button></div>
+        <div class="card-body nebula text-white">
+       <div class="fs-6 pb-1"><p class="card-subtitle  k"><b class="text-white text-opacity-50 "><small>WEEKLY ACTIVITY</small></b></p>
+</div> <h6 class="card-text seal">52%</h6>
+</div>
+      <div class="p-2 pt-3 pe-2 nebula"><button type="button" class="btn btn-success "
+        style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .75rem;"> <i class="bi bi-caret-up-fill "><small class="ps-1">17%</small></i>
+        </div></div>
+       
+        <div class="card rounded d-flex flex-row ">
+          <div class="card-head comet ps-2 d-flex align-items-center "><button class="btn btn-large" style="background-color: #f1ebf2;"><img  src=".\bootstrap\assests\images\timer_blue.png"></button></div>
+           <div class="card-body comet text-white">
+          <div class="fs-6 pb-1"><p class="card-subtitle text-body-tertiary text-opacity-50 text-muted k"><b><small>WORKED THIS WEEK</small></b></p></div><h6 class="card-text seal text-black">11:56:33</h6>
+        </div>
+        <div class="p-2 pt-3 pe-2 comet"><button type="button" class="btn btn-danger"
+          style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .7rem; --bs-btn-font-size: .75rem;"> <i class="bi bi-caret-down-fill "><small class="ps-1">17%</small></i>
+          </div>
+         </div> 
+         <div class="d-grid gap-2 col-10 pt-5 pb-3 mx-auto">
+          <button class="btn btn-light text-black border border-2 fs-6  " type="button" style="color: #3d0482;"><strong style="color: #3d0482;"><img class="img-fluid pe-3"src=".\assests\images\pdf.png" alt="pdf" style="color: #3d0482;">EXPORT AS PDF</strong></button>
+        </div> 
+          
+      </div>
+
+      </div>
+       </div>
+       <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8 col-12 border">
+            <h4 class="h4 ps-4 pb-2 pt-4">To-Do lists</h4>
+            <div class="container p-2">
+          <div class="row">
+          <div class="col-2 text-center  pb-1">
+           <div class="land fs-4" style="color: #3d0482;"><b>20</b><br><div class="fs-6 land" style="color: #3d0482;"><b>May</b></div></div>
+          </div>
+        <div class="col text-start border border-end-0">
+          <h6 class="h6 p-2">Revamp Instagram App<br><div class="text-muted pt-1">Today</div></h6>
+         </div> 
+        <div class="col-2 text-center border  border-start-0">
+          <img class="img-fluid pt-3" src=".\bootstrap\assests\images\more.png" alt="more">
+         </div>
+      </div>
+       </div>
+         <div class="container p-2">
+          <div class="row">
+          <div class="col-2 text-center  p-6">
+            <div class=" fs-4"><b>21</b><br><div class="fs-6 "><b>May</b></div></div>      
+          </div>
+        <div class="col text-start border border-1 bg-secondary-subtle">
+          <h6 class="h6 p-2">Prototyping<br><div class="text-muted pt-1">Upcoming</div></h6>
+         </div>
+        <div class="col-2 text-center border border-1 border-start-0 bg-secondary-subtle">
+          <img class="img-fluid pt-3" src=".\bootstrap\assests\images\more.png" alt="more">
+         </div>
+      </div>
+        
+          </div>
+          <div class="container p-2">
+            <div class="row">
+            <div class="col-2 text-center  p-6">
+              <div class=" fs-4"><b>22</b><br><div class="fs-6"><b>May</b></div></div>
+            </div>
+          <div class="col text-start border border-1 bg-secondary-subtle">
+            <h6 class="h6 p-2">Collect references for new project<br><div class="text-muted pt-1">Upcoming</div></h6>
+           </div>
+          <div class="col-2 text-center border border-1 border-start-0 bg-secondary-subtle">
+            <img class="img-fluid pt-3" src=".\bootstrap\assests\images\more.png" alt="more">
+           </div>
+        </div>
+
+          
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 col-12 border">
+          <h5 class="p-2 ps-1 pt-3 pb-3"><strong>Screenshots</strong></h5>
+          <div class="container  border  border-start-0 border-top-0 border-end-0 pb-3">
+            <div class="row">
+              <div class="col-2">
+                <img class="img-fluid" src=".\bootstrap\assests\images\picture.png" alt="picture">
+              </div>
+              <div class="col-7">
+                <strong><small>shot_1_attach_1.png</small></strong>
+              </div>
+              <div class="col-3">
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-sm bg-secondary-subtle" type="button"><b style="color: #5d2f7e;">View</b></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container  border  border-start-0 border-top-0 border-end-0 pb-3 pt-4">
+            <div class="row">
+              <div class="col-2">
+                <img class="img-fluid" src=".\bootstrap\assests\images\picture.png" alt="picture">
+              </div>
+              <div class="col-7">
+                <strong><small>shot_1_attach_3.png</small></strong>
+              </div>
+              <div class="col-3 ">
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-sm bg-secondary-subtle" type="button"><b style="color: #5d2f7e;">View</b></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container  border  border-start-0 border-top-0 border-end-0 pb-3 pt-4">
+            <div class="row">
+              <div class="col-2">
+                <img class="img-fluid" src=".\bootstrap\assests\images\video_camera.png" alt="picture">
+              </div>
+              <div class="col-7">
+                <strong><small>Screen record_12.mov</small></strong>
+              </div>
+              <div class="col-3">
+                <div class="d-grid gap-2 d-md-block">
+                  <button class="btn btn-sm " type="button" style="background-color: #280355;"><b class="text-white fs-12">Play</b></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 col-10 pt-4 pb-3 mx-auto">
+            <button class="btn  text-black border border-2 border-secondarysubtle  fs-6 " type="button" style="border-color: #523d6acd;"><strong style="color: #280355;">VIEW ALL</strong></button>
+          </div>
+          
+        </div>
+       </div>
+       </div>
+   <script src="./assests/js/bootstrap.min.js"></script>
+   <script src="./assests/js/jquery.min.js"></script>
+   <script src=".\assests\js\popper.min.js"></script>
+</body>
+</html>
